@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Suspects Matched Details {% endblock title %}
+
+{% block content %}
+<!--- panel wrap div end -->
+<div class="page-wrap">
+    <div class="page-wrapper">
+      <div class="primary-content  marRight30">
+        <div class="mid-panel">
+          <div class="panel">
+            <div class="title">
+              <h1>Suspect's Details</h1>
+            </div>
+            <div class="content marginTop"> <img src="{{user.photo.url}}" width="200" height="200" class="marRight30"/>
+              <h2>Crime Description <small>({{user.crime_committed}})</small></h2>
+              <p>{{user.description}}</p>
+            </div>
+            <div class="clearing"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="midpanel">
+          <div class="content marginBottom">
+            <div class="title">
+              <h1>Details</h1>
+            </div>
+            <div class="border"></div>
+            <ul>
+              <li>Name<a href="#"> {{user.username}}</a></li>
+              <li>Age<a href="#"> {{user.age}}</a></li>
+              <li>Country<a href="#">{{user.country}}</a></li>
+              <li>State<a href="#">{{user.state}}</a></li>
+              <li>Gender<a href="#">{{user.gender}}</a></li>
+              <li>Height<a href="#">{{user.height}} </a></li>
+              <li>Marital Status<a href="#">{{user.married}}</a></li>
+              <li>Address <a href="#">{{user.address}}</a></li>
+              <li>Last Modified <a href="#">{{user.date}}</a></li>
+              <li>Date Created <a href="#">{{user.date_created}}</a></li>
+              <li class="borderNone padBottom20"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--- page wrap div end -->
+{% endblock content %}

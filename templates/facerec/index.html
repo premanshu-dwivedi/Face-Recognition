@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+<!--- header div end -->
+<div class="panel-wrap">
+    <div class="panel-wrapper">
+      <div class="panel marRight30">
+        <div class="img"><img src="https://res.cloudinary.com/daniela1/image/upload/v1687023439/face2_jfo6wl.jpg"/></div>
+        <div class="title">
+          <h1>Face Detection</h1>
+        </div>
+        <div class="border"></div>
+        <div class="content">
+          <p>Searching for a face in a photo or video stream</p>
+          <div class="button-link"><a href="{% url 'recapp:about_view' %}">readmore</a></div>
+        </div>
+      </div>
+      <div class="panel marRight30">
+        <div class="img"><img src="https://res.cloudinary.com/daniela1/image/upload/v1687023440/face2_glo3ng.png"/></div>
+        <div class="title">
+          <h1 class="border-bottom">Face Recognition/ <br>Identification</h1>
+        </div>
+        <div class="border"></div>
+        <div class="content">
+          <p>Knowing who the detected face is<br />
+          </p>
+          <div class="button-link"><a href="{% url 'recapp:about_view' %}">readmore</a></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="img"><img src="https://res.cloudinary.com/daniela1/image/upload/v1687023440/motion_xnmf9y.jpg"/></div>
+        <div class="title">
+          <h1 class="border-bottom">Motion Detection</h1>
+        </div>
+        <div class="border"></div>
+        <div class="content">
+          <p>Detects change in position of objects.</p>
+          <div class="button-link"><a href="{% url 'recapp:about_view' %}">readmore</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- panel wrap div end -->
+  <div class="clearing"></div>
+  <div class="page-wrap">
+    <div class="page-wrapper">
+      <div class="primary-content marRight30 ">
+        <div class="toppanel">
+          <div class="container">
+            <h1>STATEMENT OF THE PROBLEM</h1>
+            <div class="border-bottom"></div>
+            <div class="container-wrap">
+              <div class="container-panel padBottom">
+                <div class="container-panel-left marRight20"><img src="{% static 'facerec/images/icon-1.png' %}"></div>
+                <div class="container-panel-right">
+                  <h3>Poor Image Quality</h3>
+                  <p>One of the biggest challenges of face recognition technology is poor image quality, which 
+                    can lead to inaccurate identification of suspects. Poor lighting conditions, blurry images, 
+                    and low-resolution images can all affect the accuracy of face recognition systems.</p>
+                </div>
+              </div>
+              <div class="container-panel borderNone marginTop">
+                <div class="container-panel-left marRight20"><img src="{% static 'facerec/images/icon-3.png' %}"></div>
+                <div class="container-panel-right">
+                  <h3>Diversity in Faces</h3>
+                  <p>
+                    Another challenge associated with face recognition technology is the diversity of human 
+faces. Different races, ages, and genders can have unique facial features, making it difficult 
+for systems to accurately identify individuals from certain groups.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-wrap borderNone">
+            <div class="container-panel marLeft20 padBottom">
+              <div class="container-panel-left marRight20"><img src="{% static 'facerec/images/icon-2.png' %}"></div>
+              <div class="container-panel-right">
+                <h3>Privacy Concern</h3>
+                <p>
+                  Face recognition technology raises significant privacy concerns, as it involves collecting 
+and storing personal information without consent. This can lead to potential misuse of the 
+technology and violation of individuals' rights
+                </p>
+              </div>
+            </div>
+            <div class="container-panel borderNone marginTop marLeft20">
+              <div class="container-panel-left marRight20"><img src="{% static 'facerec/images/icon-4.png' %}"></div>
+              <div class="container-panel-right">
+                <h3>Biases</h3>
+                <p>Face recognition systems can also be biased, as they can be trained on datasets that are not 
+                  diverse enough, leading to inaccurate identification of individuals from certain group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--- page wrap div end -->
+
+{% endblock content %}

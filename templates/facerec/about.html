@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About Us {% endblock title %}
+
+{% block content %}
+<!--- panel wrap div end -->
+<div class="page-wrap">
+    <div class="page-wrapper">
+      <div class="primary-content marRight30">
+        <div class="mid-panel">
+          <div class="mid-panel-content">
+            <div class="title">
+              <h1>About us</h1>
+            </div>
+            <div class="border"></div>
+            <h2>Description</h2>
+            <p>
+              Over the years, locating criminals has proven to be a difficult task. Previously, the approach was 
+based on leads obtained from evidence found at the scene of the crime. Genetic evidence is 
+relatively easy to locate, but criminals have become more adept at hiding their tracks and leaving 
+no trace. As a result, facial recognition and surveillance technologies are now being used. 
+Ultimately, face recognition technology has become an increasingly popular area of research due 
+to its potential to enhance security and surveillance systems. The face is an essential element of 
+social identity, and each face has distinctive features. Facial recognition is a unique biometric 
+approach that is highly accurate and minimally invasive for crime detection. It involves naturally 
+recognizing and verifying a person's identity from video sequences or photos using their face.
+In particular, the use of face recognition technology for crime detection has gained significant 
+attention in recent years. With the increasing use of video surveillance cameras in public places, 
+the ability to accurately and efficiently identify suspects through facial recognition can 
+significantly improve the effectiveness of law enforcement and contribute to public safety.
+Identifying criminals is the most critical responsibility for law enforcement agencies, particularly 
+in the context of the challenging and time-consuming task of locating criminals, who may be 
+anywhere. In urban or densely populated areas, this task becomes even more daunting. In certain
+circumstances, the manual identification process may provide additional information regarding 
+criminals. In this regard, this paper proposes an automatic face recognition system for crime 
+detection that utilizes facial detection techniques to enable police officers to identify and 
+apprehend criminals in public places. The facial recognition system described in this article is a 
+2
+combination of the best facial recognition, classification, and feature extraction algorithms 
+currently available.
+Automated facial recognition is a computerized technique that extracts significant facial features, 
+such as the distance between the eyes, the width of the nose or jawline, and the eye color, among 
+others. These characteristics are useful in categorization and record matching. This system 
+involves two crucial processes: detection and recognition. The facial recognition process 
+involves two primary phases: training and assessment. The algorithm is fed a sample of images 
+and trained on the training set. The facial recognition assessment phase then compares the newly 
+obtained test image to the database. In detection we need just to determine if there is some face in 
+the image, but in recognition we want to determine whose face it is. (Tayyaba Zamindar et al., 
+2022)
+The face plays an important role in human communication, revealing unique character traits, 
+emotions, and age, and allowing for social interaction. In recent years, biometric-based 
+technologies, including facial recognition, have emerged as the most effective and reliable method 
+for recognizing faces. Biometrics is a field that studies a person's inherent, specific characteristics, 
+which can be beneficial in identifying an individual. Although individuals can deny the truth, 
+biometric technologies such as fingerprints, faces, and eyes are relatively more reliable and 
+difficult to forge since "the body never lies," and altering biometric features is incredibly 
+challenging.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="midpanel">
+          <div class="content marginBottom">
+            <div class="title">
+              <h1>Details to get including description</h1>
+            </div>
+            <div class="border"></div>
+            <ul>
+              <li>Name<a href="#"> {{user.username}}</a></li>
+              <li>Age<a href="#"> {{user.age}}</a></li>
+              <li>Country<a href="#">{{user.country}}</a></li>
+              <li>State<a href="#">{{user.state}}</a></li>
+              <li>Gender<a href="#">{{user.gender}}</a></li>
+              <li>Height<a href="#">{{user.height}} </a></li>
+              <li>Marital Status<a href="#">{{user.married}}</a></li>
+              <li>Address <a href="#">{{user.address}}</a></li>
+              <li>Last Modified <a href="#">{{user.date}}</a></li>
+              <li>Date Created <a href="#">{{user.date_created}}</a></li>
+              <li class="borderNone padBottom20"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!--- page wrap div end -->
+
+{% endblock content %}
