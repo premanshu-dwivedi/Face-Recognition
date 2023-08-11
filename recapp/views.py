@@ -41,8 +41,8 @@ class FaceRecognition:
         self.encode_faces()
 
     def encode_faces(self):
-        for image in os.listdir('C:/Python/FaceRecogProject/FaceRec/static/faces'):
-            face_image = face_recognition.load_image_file(f"C:/Python/FaceRecogProject/FaceRec/static/faces/{image}")
+        for image in os.listdir('D:/Python Projects/Face-Recognition/static/faces'):
+            face_image = face_recognition.load_image_file(f"D:/Python Projects/Face-Recognition/static/faces/{image}")
             face_encoding = face_recognition.face_encodings(face_image)[0]
 
             self.known_face_encodings.append(face_encoding)
@@ -84,8 +84,9 @@ class FaceRecognition:
                     if matches[best_match_index]:
                         name = self.known_face_names[best_match_index]
                         confidence = face_confidence(face_distances[best_match_index])
-
-                    self.face_names.append(f'{name} ({confidence})')
+                    
+                    if confidence > '94%':
+                        self.face_names.append(f'{name} ({confidence})')
 
             self.process_current_frame = not self.process_current_frame
 
